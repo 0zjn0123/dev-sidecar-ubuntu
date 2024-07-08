@@ -31,6 +31,9 @@ jobs:
         cnpm install lerna@6 -g
 
         cnpm install phantomjs -g
-        # 先执行上面的步骤，然后运行如下命令打包成可执行文件
+        lerna bootstrap
+
+        cd packages/gui
+        
         npm run electron:build
 
